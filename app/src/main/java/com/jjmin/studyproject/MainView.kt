@@ -1,6 +1,6 @@
 package com.jjmin.studyproject
 
-public interface MainView{
+interface MainView{
 
     fun ResultData(result : String)
 
