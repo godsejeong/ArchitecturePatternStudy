@@ -18,7 +18,6 @@ class MainPresenter(view : MainView) {
             else -> "데이터 오류"
         }
 
-//        Log.e("result", result as String?)
         view?.ResultData(result.toString())
     }
 }
