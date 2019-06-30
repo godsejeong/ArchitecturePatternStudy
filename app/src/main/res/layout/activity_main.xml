@@ -7,115 +7,42 @@
     tools:context=".MainActivity">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/mainInputLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/mainResultTv"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <EditText
-            android:id="@+id/mainEt1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="첫번째"
-            app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/mainTv"
+            android:id="@+id/mainEt"
+            app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/mainOperator"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/mainOperator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="연산자"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/mainEt1"
-            app:layout_constraintRight_toLeftOf="@+id/mainEt2"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <EditText
-            android:id="@+id/mainEt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="두번"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/mainOperator"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="텍스트를 입력하세요"/>
 
     <TextView
-        android:visibility="gone"
-        android:id="@+id/mainResultTv"
-        app:layout_constraintTop_toBottomOf="@+id/mainInputLayout"
-        app:layout_constraintBottom_toTopOf="@+id/layoutBtnLayout"
-        android:layout_width="wrap_content"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_height="wrap_content"
-        android:text="결과 : 30.5"/>
-
-    <LinearLayout
-        android:id="@+id/layoutBtnLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/mainResultBtn"
-        app:layout_constraintTop_toBottomOf="@+id/mainResultTv">
-
-
-        <Button
-            android:id="@+id/mainPlusBtn"
+            app:layout_constraintTop_toBottomOf="@+id/mainEt"
+            android:id="@+id/mainTv"
+            android:text="변환된 텍스트"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintBottom_toTopOf="@+id/mainBtn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+"
-            android:onClick="onClickView"
-            android:textSize="20sp"/>
-
-        <Button
-            android:id="@+id/mainMiunsBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
-            android:onClick="onClickView"
-            android:textSize="20sp"/>
-
-
-        <Button
-            android:id="@+id/mainMultipBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"
-            android:onClick="onClickView"
-            android:textSize="20sp"/>
-
-
-        <Button
-            android:id="@+id/mainDivisionBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="/"
-            android:onClick="onClickView"
-            android:textSize="20sp"/>
-    </LinearLayout>
+            android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/mainResultBtn"
-        app:layout_constraintTop_toBottomOf="@+id/layoutBtnLayout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_width="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClickView"
-        android:textSize="15sp"
-        android:text="연산하기"/>
+            android:id="@+id/mainBtn"
+            android:layout_marginTop="20dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@+id/mainTv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="변환"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
