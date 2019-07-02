@@ -1,10 +1,11 @@
-package com.jjmin.studyproject
+package com.jjmin.studyproject.search
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
+import com.jjmin.studyproject.R
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers

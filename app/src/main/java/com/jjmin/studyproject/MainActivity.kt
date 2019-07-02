@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.jjmin.studyproject.bus.RxBusActivity
+import com.jjmin.studyproject.search.SearchActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         mainSearch.setOnClickListener {
-            var intnet = Intent(this,SearchActivity::class.java)
+            var intnet = Intent(this, SearchActivity::class.java)
             startActivity(intnet)
         }
 
