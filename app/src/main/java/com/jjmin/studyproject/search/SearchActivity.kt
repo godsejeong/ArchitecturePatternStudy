@@ -13,10 +13,10 @@ import io.reactivex.subjects.PublishSubject
 import kotlinx.android.synthetic.main.activity_search.*
 
 class SearchActivity : AppCompatActivity() {
-    var data = ""
     var subject: PublishSubject<String> = PublishSubject.create()
     var baselist = ArrayList<String>()
-    lateinit var adapter: LastAdapter
+    lateinit var adapter: ListAdapter
+
     @SuppressLint("CheckResult")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +26,7 @@ class SearchActivity : AppCompatActivity() {
             baselist.add("text$it")
         }
 
-        adapter = LastAdapter()
+        adapter = ListAdapter()
         searchRecycler.adapter = adapter
         adapter.submitList(baselist)
 

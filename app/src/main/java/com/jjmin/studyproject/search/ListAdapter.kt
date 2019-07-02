@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.jjmin.studyproject.R
 
-class LastAdapter : ListAdapter<String, RecyclerView.ViewHolder>(itemCallback){
+class ListAdapter : ListAdapter<String, RecyclerView.ViewHolder>(itemCallback){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context).inflate(
