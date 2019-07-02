@@ -1,4 +1,4 @@
-package com.jjmin.studyproject
+package com.jjmin.studyproject.bus
 
 import io.reactivex.Observable
 import io.reactivex.subjects.PublishSubject
@@ -8,7 +8,7 @@ class RxEventBus{
     private var rxEventBus : RxEventBus? = null
     private val subject : PublishSubject<String> = PublishSubject.create()
 
-    fun getInstance() : RxEventBus{
+    fun getInstance() : RxEventBus {
 
         if(rxEventBus == null){
             rxEventBus = RxEventBus()
