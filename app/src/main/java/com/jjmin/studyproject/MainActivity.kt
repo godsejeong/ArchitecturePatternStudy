@@ -21,6 +21,5 @@ class MainActivity : AppCompatActivity() {
             var intnet = Intent(this, SearchActivity::class.java)
             startActivity(intnet)
         }
-
     }
 }

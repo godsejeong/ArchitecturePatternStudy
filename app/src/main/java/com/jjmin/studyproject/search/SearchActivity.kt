@@ -32,13 +32,11 @@ class SearchActivity : AppCompatActivity() {
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                Log.e("check", "check")
                 subject.onNext(query!!)
                 return true
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                Log.e("check", "check1234")
                 subject.onNext(newText!!)
                 return true
             }

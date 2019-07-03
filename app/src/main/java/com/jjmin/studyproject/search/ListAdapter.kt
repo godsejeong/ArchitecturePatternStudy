@@ -37,7 +37,6 @@ class ListAdapter : ListAdapter<String, RecyclerView.ViewHolder>(itemCallback){
             }
 
             override fun areContentsTheSame(oldItem: String, newItem: String): Boolean {
-                Log.e("Item","old : $oldItem  new : $newItem")
                 return oldItem == newItem
             }
         }
