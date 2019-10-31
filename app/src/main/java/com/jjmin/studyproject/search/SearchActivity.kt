@@ -22,7 +22,7 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-        (0..10).forEach {
+        (0..50).forEach {
             baselist.add("text$it")
         }
 
@@ -45,7 +45,7 @@ class SearchActivity : AppCompatActivity() {
         subject
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .flatMap { searchItem(it) }
+            .concatMap { searchItem(it) }
             .subscribe { list ->
                 adapter.submitList(list)
             }
@@ -61,6 +61,7 @@ class SearchActivity : AppCompatActivity() {
             }
         }else{
             list = baselist
+            //position top setting 해줘야함
         }
 
         return Observable.fromArray(list)

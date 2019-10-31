@@ -21,5 +21,10 @@ class MainActivity : AppCompatActivity() {
             var intnet = Intent(this, SearchActivity::class.java)
             startActivity(intnet)
         }
+
+        mainTest.setOnClickListener {
+            var intent = Intent(this,TestActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
