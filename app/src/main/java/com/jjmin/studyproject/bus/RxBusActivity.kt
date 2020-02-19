@@ -1,5 +1,6 @@
 package com.jjmin.studyproject.bus
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,8 @@ import kotlinx.android.synthetic.main.activity_rx_bus.*
 
 class RxBusActivity : AppCompatActivity() {
     val event = RxEventBus()
+
+    @SuppressLint("CheckResult")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rx_bus)
