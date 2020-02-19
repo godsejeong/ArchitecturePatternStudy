@@ -6,38 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
+    <TextView
+            android:id="@+id/mainTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/mainSearch"
-            android:id="@+id/mainBus"
-            android:text="Bus"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    <Button
-            app:layout_constraintBottom_toTopOf="@+id/mainTest"
-            app:layout_constraintTop_toBottomOf="@+id/mainBus"
-            android:id="@+id/mainSearch"
-            android:layout_marginTop="15dp"
-            android:text="Search"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    <Button
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mainSearch"
-            android:id="@+id/mainTest"
-            android:layout_marginTop="15dp"
-            android:text="Test"
-            app:layout_constraintVertical_chainStyle="packed"
-            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            tools:text="TestText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

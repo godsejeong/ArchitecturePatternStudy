@@ -1,30 +1,28 @@
 package com.jjmin.studyproject
 
-import android.content.Intent
+
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.jjmin.studyproject.bus.RxBusActivity
-import com.jjmin.studyproject.search.SearchActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
+
+    @Inject lateinit var test : Test
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mainBus.setOnClickListener {
-            var intnet = Intent(this, RxBusActivity::class.java)
-            startActivity(intnet)
-        }
+       var component = DaggerTestComponent.builder()
+            .testModule(TestModule())
+            .build()
 
-        mainSearch.setOnClickListener {
-            var intnet = Intent(this, SearchActivity::class.java)
-            startActivity(intnet)
-        }
+        component.inject(this)
 
-        mainTest.setOnClickListener {
-            var intent = Intent(this,TestActivity::class.java)
-            startActivity(intent)
-        }
+        mainTv.text = "${test.num}"
+
+
     }
 }
