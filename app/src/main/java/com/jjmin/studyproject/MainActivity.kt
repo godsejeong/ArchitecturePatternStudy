@@ -23,6 +23,5 @@ class MainActivity : AppCompatActivity() {
 
         mainTv.text = "${test.num}"
 
-
     }
 }
